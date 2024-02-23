@@ -35,6 +35,9 @@ public abstract class Producto {
     public double getIva() {
         return iva;
     }
+    public int getCodigo() {
+        return codigo;
+    }
 
     public void setIva(double iva) {
         this.iva = iva;

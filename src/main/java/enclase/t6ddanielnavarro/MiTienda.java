@@ -5,6 +5,7 @@
 package enclase.t6ddanielnavarro;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 
 /**
@@ -27,12 +28,23 @@ public class MiTienda {
         listaProductos.add(new Musica("Grupo Falso", 2222, 15, 0.21, "Disco 2"));
         
         listaProductos.forEach((t) -> {
-            System.out.println(t.getDescripcion() + " " + t.getPrecio());
-            
-               
-       
+            System.out.println(t.getDescripcion() + " " + t.getPrecio());  
+        });
         
+        Comparator<Producto> comparadorPrecio = ((Producto p1, Producto p2)->
+                    Double.compare(p1.getPrecio(), p2.getPrecio()));
+        listaProductos.sort(comparadorPrecio);
+        System.out.println("ordenado por precio");
+         listaProductos.forEach((t) -> {
+            System.out.println(t.getDescripcion() + " " + t.getPrecio());  
+        });
         
-        
+                
+        Comparator<Producto> comparadorCodigo =(Producto p1, Producto p2)->
+                Integer.compare(p1.getCodigo(), p2.getCodigo());
+        System.out.println("ordenador por codigo");
+        listaProductos.forEach((t) -> {
+            System.out.println(t.getDescripcion() + " " + t.getCodigo());  
+        });
     }   
 }
