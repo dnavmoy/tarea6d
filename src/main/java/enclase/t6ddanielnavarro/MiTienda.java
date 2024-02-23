@@ -8,7 +8,7 @@ package enclase.t6ddanielnavarro;
  *
  * @author daniel
  */
-public class T6dDanielNavarro {
+public class MiTienda {
 
     public static void main(String[] args) {
     

@@ -6,33 +6,32 @@ package enclase.t6ddanielnavarro;
 
 import java.util.Objects;
 
-
-
 /**
  *
  * @author daniel
  */
-public final class Musica extends Producto{
+public abstract class Ropa extends Producto implements SeEnvia{
     
-    private String Grupo;
+    
+    private String marca;
 
-    public Musica(String Grupo, int codigo, double precio, double iva, String descripcion) {
+    public Ropa(String marca, int codigo, double precio, double iva, String descripcion) {
         super(codigo, precio, iva, descripcion);
-        this.Grupo = Grupo;
+        this.marca = marca;
     }
 
-    public String getGrupo() {
-        return Grupo;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setGrupo(String Grupo) {
-        this.Grupo = Grupo;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.Grupo);
+        int hash = 5;
+        hash = 97 * hash + Objects.hashCode(this.marca);
         return hash;
     }
 
@@ -47,21 +46,22 @@ public final class Musica extends Producto{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Musica other = (Musica) obj;
-        return Objects.equals(this.Grupo, other.Grupo);
+        final Ropa other = (Ropa) obj;
+        return Objects.equals(this.marca, other.marca);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Musica{");
-        sb.append("Grupo=").append(Grupo);
+        sb.append("Ropa{");
+        sb.append("marca=").append(marca);
         sb.append('}');
         return sb.toString();
     }
 
-  
-   
     
+    
+    
+            
     
 }

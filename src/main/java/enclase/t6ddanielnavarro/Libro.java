@@ -8,36 +8,37 @@ import java.util.Objects;
 
 
 
+
 /**
  *
  * @author daniel
  */
-public final class Musica extends Producto{
-    
-    private String Grupo;
+public class Libro extends Producto implements Comparable<Libro> {
 
-    public Musica(String Grupo, int codigo, double precio, double iva, String descripcion) {
+    private String ISBN;
+
+    public Libro(String ISBN, int codigo, double precio, double iva, String descripcion) {
         super(codigo, precio, iva, descripcion);
-        this.Grupo = Grupo;
+        this.ISBN = ISBN;
     }
 
-    public String getGrupo() {
-        return Grupo;
+    public String getISBN() {
+        return ISBN;
     }
 
-    public void setGrupo(String Grupo) {
-        this.Grupo = Grupo;
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
     }
 
     @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.Grupo);
+    public final int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.ISBN);
         return hash;
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public final boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
@@ -47,21 +48,30 @@ public final class Musica extends Producto{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Musica other = (Musica) obj;
-        return Objects.equals(this.Grupo, other.Grupo);
+        final Libro other = (Libro) obj;
+        return Objects.equals(this.ISBN, other.ISBN);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Musica{");
-        sb.append("Grupo=").append(Grupo);
+        sb.append("Libro{");
+        sb.append("ISBN=").append(ISBN);
         sb.append('}');
         return sb.toString();
     }
 
-  
-   
+    @Override
+    public int compareTo(Libro o) {
+        return this.getISBN().compareTo(o.getISBN());
+    }
+
     
     
+
+    
+
+    
+    
+
 }
