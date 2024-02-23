@@ -13,7 +13,7 @@ import java.util.Objects;
  *
  * @author daniel
  */
-public class Libro extends Producto implements Comparable<Libro> {
+public abstract class Libro extends Producto implements Comparable<Libro> {
 
     private String ISBN;
 

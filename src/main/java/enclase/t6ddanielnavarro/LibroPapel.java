@@ -37,7 +37,7 @@ public final class LibroPapel extends Libro implements SeEnvia{
 
     @Override
     public void enviar(String direccion) {
-        System.out.println("enviando: " + this.getDescripcion() + " Libro, se envia a:   " + direccion);
+        System.out.println("enviando : " + this.getDescripcion() + " ,se envia a:   " + direccion);
     }
     
     

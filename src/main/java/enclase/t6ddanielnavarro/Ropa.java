@@ -59,7 +59,10 @@ public abstract class Ropa extends Producto implements SeEnvia{
         return sb.toString();
     }
 
-    
+     @Override
+    public void enviar(String direccion) {
+        System.out.println("enviando : " + this.getDescripcion() + " ,se envia a:   " + direccion);
+    }
     
     
             

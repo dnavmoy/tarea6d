@@ -36,7 +36,7 @@ public class LibroDigital extends Libro implements SeDescarga{
 
     @Override
     public void descargar() {
-        System.out.println("http://DanielNavarro.daw//" + super.hashCode());
+        System.out.println("http://DanielNavarro.daw/" + hashCode());
         
     }
     
