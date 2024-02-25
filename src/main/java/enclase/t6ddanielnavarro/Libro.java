@@ -21,6 +21,10 @@ public abstract class Libro extends Producto implements Comparable<Libro> {
         super(codigo, precio, iva, descripcion);
         this.ISBN = ISBN;
     }
+    public Libro() {
+        super(0, 0, 0, "");
+        this.ISBN = "";
+    }
 
     public String getISBN() {
         return ISBN;
@@ -65,6 +69,10 @@ public abstract class Libro extends Producto implements Comparable<Libro> {
     public int compareTo(Libro o) {
         return this.getISBN().compareTo(o.getISBN());
     }
+    
+    public abstract void cambiarPrecioEnvio(double recargoEnvio);
+        
+    
 
     
     

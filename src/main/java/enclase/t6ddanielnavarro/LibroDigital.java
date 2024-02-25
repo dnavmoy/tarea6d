@@ -39,6 +39,12 @@ public class LibroDigital extends Libro implements SeDescarga{
         System.out.println("http://DanielNavarro.daw/" + hashCode());
         
     }
+
+    @Override
+    public void cambiarPrecioEnvio(double recargoEnvio) {
+            System.out.println("no hay recargo por envio");
+    }
+    
     
     
     

@@ -39,6 +39,11 @@ public final class LibroPapel extends Libro implements SeEnvia{
     public void enviar(String direccion) {
         System.out.println("enviando : " + this.getDescripcion() + " ,se envia a:   " + direccion);
     }
+
+    @Override
+    public void cambiarPrecioEnvio(double recargoEnvio) {
+        super.setPrecio(super.getPrecio()+recargoEnvio);
+    }
     
     
     
