@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  *
@@ -115,6 +116,13 @@ public class MiTienda {
         while (it.hasNext()) {
             System.out.println(it.next());
         }
+        
+        // otra forma: 
+        //for (Iterator<Libro> iterator = listaLibros.iterator(); iterator.hasNext();) {
+        //    Libro next = iterator.next();
+        //    System.out.println(next);
+        //    
+        //}
 
         //8. Ordena los libros según ISBN, haciendo uso de <<Comparable>>.
         //Muestra la lista de libros ordenada. 
@@ -147,7 +155,9 @@ public class MiTienda {
         //comprobar si existe un libro o no existe.
         
         //conversion explicita, creamos un LibroDigital dentro de la lista de Libros
-        System.out.println(listaLibros.contains(new LibroDigital(157, "4444", 1004, 4.57, 0.05, "Libro Digital 1"))
+        System.out.println(
+                listaLibros.contains(new LibroDigital(157, "4444",
+                        1004, 4.57, 0.05, "Libro Digital 1"))
         );
 
         //12.Usando la lista de productos inicial, crea una nueva lista con todos
@@ -158,7 +168,7 @@ public class MiTienda {
                 listaEnviar.add(p);
             }
         }
-
+              
         //13. Recorre la lista de objetos que Se Envian y llama al método de la interfaz.
         for (Producto p : listaEnviar) {
             System.out.println(p);
